@@ -61,6 +61,8 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
             background-color: rgba(207, 97, 235, 0.72);
             height: 7vh;
         }
+
+
       /* EXERCISE 1
             For every Album we'd like to have a consistent style.
             Create a class for:
@@ -74,6 +76,83 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
 
             to make sure you give every album the same consistent appearance.
          */
+         .album-container {
+            text-align: center;
+            padding-bottom: 1em;
+            margin: 1em;
+        }
+
+        .album-container img {
+            width: 100%;
+        }
+
+        .album-artist:after {
+            content: ' • '
+        }
+
+        .album-title {
+            margin-top: 0.50em;
+            margin-bottom: 0.25em;
+            font-size: 1.3em
+        }
+
+        .album-genre {
+
+        }
+        /* EX 6 */
+        
+        .carousel-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: lowercase;
+            color: #d1d1d1;
+            mix-blend-mode: color-burn;
+            font-weight: 900;
+        }
+        
+        /* Ex 7 */
+        .album-tapestry {
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        
+        .squared {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            margin: 10px auto;
+        }
+        footer ul li {
+            list-style: none;
+        }
+        .insta-btn {
+            padding: 15px 45px;
+            border: none;
+            border-radius: 16px;
+            background-color: deeppink;
+            color: white;
+            font-weight: 700;
+            transition: all 0.4s;
+        }
+        
+        .insta-btn:hover {
+            filter: drop-shadow(0px 0px 10px rgba(255, 20, 147, 0.71));
+            background-color: #eb2c94;
+        }
+
+        .toggle-btn {
+            width: 100px;
+            position: sticky;
+            top: 5em;
+            right: 5em;
+            margin-left: auto;
+            margin-top: 3em;
+            z-index: 1;
+        }
+        
     </style>
   </head>
   <title>B E S T A L B U M</title>
@@ -85,10 +164,11 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
 
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
       <div class="cointainer-fluid">
-      <a class="navbar-brand" href="#">Best Albums</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+      <a class="navbar-brand" href="#">Best Albums</a>
       </button>
       
 
@@ -122,16 +202,17 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
             - 3 albums per row when you are on a tablet (or a smaller viewport)
             - 2 albums per row when you are on a small screen
         -->
- <div class="container">
+ 
         <section id="fav-albums">
-          <div class="container">
+            <div class="container section">
+         
               <div class="row py-5">
                   <div class="col-6 col-md-4 col-lg-3">
                       <div class="album-container">
                           <img src="bmth.jpeg" class="img-fluid">
                           <h4 class="album-title">Title</h4>
                           <span class="album-artist">Artist</span>
-                          <span class="album-genre">Rock</span>
+                          <span class="album-genre">Genre</span>
                       </div>
                   </div>
                   <div class="col-6 col-md-4 col-lg-3">
@@ -140,7 +221,7 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
                           <h4 class="album-title">Title</h4>
                           <span class="album-artist">Artist</span>
 
-                          <span class="album-genre">Synthwave</span>
+                          <span class="album-genre">Genre</span>
                       </div>
                   </div>
                   <div class="col-6 col-md-4 col-lg-3">
@@ -149,7 +230,7 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
                           <h4 class="album-title">Title</h4>
                           <span class="album-artist">Artist</span>
 
-                          <span class="album-genre">Power Electronics</span>
+                          <span class="album-genre">Genre</span>
                       </div>
                   </div>
                   <div class="col-6 col-md-4 col-lg-3">
@@ -157,7 +238,7 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
                           <img src="bmth.jpeg" class="img-fluid">
                           <h4 class="album-title">Title</h4>
                           <span class="album-artist">Artist</span>
-                          <span class="album-genre">Acid Jazz</span>
+                          <span class="album-genre">Genre</span>
                       </div>
                   </div>
                   <div class="col-6 col-md-4 col-lg-3">
@@ -165,16 +246,7 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
                           <img src="bmth.jpeg" class="img-fluid">
                           <h4 class="album-title">Title</h4>
                           <span class="album-artist">Artist</span>
-                          <span class="album-genre">Rock</span>
-                      </div>
-                  </div>
-                  <div class="col-6 col-md-4 col-lg-3">
-                      <div class="album-container">
-                          <img src="bmth.jpeg" class="img-fluid">
-                          <h4 class="album-title">Title</h4>
-                          <span class="album-artist">Artist</span>
-
-                          <span class="album-genre">Synthwave</span>
+                          <span class="album-genre">Genre</span>
                       </div>
                   </div>
                   <div class="col-6 col-md-4 col-lg-3">
@@ -183,7 +255,7 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
                           <h4 class="album-title">Title</h4>
                           <span class="album-artist">Artist</span>
 
-                          <span class="album-genre">Power Electronics</span>
+                          <span class="album-genre">Genre</span>
                       </div>
                   </div>
                   <div class="col-6 col-md-4 col-lg-3">
@@ -191,27 +263,24 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
                           <img src="bmth.jpeg" class="img-fluid">
                           <h4 class="album-title">Title</h4>
                           <span class="album-artist">Artist</span>
-                          <span class="album-genre">Acid Jazz</span>
+
+                          <span class="album-genre">Genre</span>
+                      </div>
+                  </div>
+                  <div class="col-6 col-md-4 col-lg-3">
+                      <div class="album-container">
+                          <img src="bmth.jpeg" class="img-fluid">
+                          <h4 class="album-title">Title</h4>
+                          <span class="album-artist">Artist</span>
+                          <span class="album-genre">Genre</span>
                       </div>
                   </div>
               </div>
           </div>
       </section>
 
-    <!-- EXERCISE 4
-            Create a section for the album reviews.
-            Pick one of your fav albums, and create a section with:
-            - Cover
-            - Title
-            - Band
-            - Duration
-            - Genre
-            - Tracklist
-            - ... And whatever you think it's interesting about it!
-        -->
-
         <div class="jumbotron jumbotron-fluid" id="best-album-ever" style=" background-image: linear-gradient( 181deg,  rgba(225,109,245,1) 6.9%, rgba(78,248,231,1) 112.8% );">
-            <div class="container">
+            <div class="container collapse show">
               <h1 class="display-4">Album Reviews</h1>
               <h2> Title </h2>
               <h3>Band</h3>
@@ -345,16 +414,21 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
             Implement a footer with some information / social links
         -->
         
-        <footer class="bg-dark mt-5 py-5" style="text-align: center;">
+        <footer class="mt-5 py-5" style="text-align: center; background-color: rgba(137, 43, 226, 0.616);">
       <ul>
         <li>Additional information</li>
         <li>Social</li>
       </ul>
-    </footer>
-  </body>
-</html>
 
-    <!-- ############ EXTRA:
+      <div class="text-center my-4 w-100">
+          <button class="insta-btn">
+              <img src="Insta.png" alt="" style="height: 20px;">
+               Instagram
+            </button>
+      </div>
+    </footer>
+
+       <!-- ############ EXTRA:
         EXERCISE 9
             Create an album details area that is going to be toggled on and off by clicking on the album image
         -->
@@ -368,5 +442,47 @@ HINT: Manage your time in order to finish the structure and responsiveness befor
          EXERCISE 11
             Add in the footer a field that counts, on page load, how many ALBUMS there are on the page 
         -->
+
+        <script>
+     window.onload = function () {
+        addToggleButtons()    
+                
+         countAlbums()
+     }
+     function addToggleButtons() {
+                
+                for (let section of document.querySelectorAll("section")) {
+                    
+                    section.children[0].classList.add("collapse")
+                    section.children[0].classList.add("show")
+                    
+                    section.innerHTML = `
+                        <button class='btn btn-outline-light toggle-btn' data-bs-toggle="collapse" data-bs-target="#${section.id} > div">
+                            Show/hide section
+                        </button>
+                    ` + section.innerHTML
+                    
+                }
+            }
+            function countAlbums() {
+                const albumN = document.querySelectorAll("img").length - 3
+                
+                
+                const span = document.createElement("span")
+                
+                span.classList.add("text-center")
+                span.classList.add("d-inline-block")
+                span.classList.add("w-100")
+                span.classList.add("my-4")
+                
+                span.innerHTML = "P.S. This page contains " + albumN + " albums!"
+                
+                document.querySelector("footer").appendChild(span)
+            }
+        </script>
+  </body>
+</html>
+
+ 
 
   
